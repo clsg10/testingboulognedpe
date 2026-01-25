@@ -7,27 +7,28 @@ const Header = () => {
     <>
       {/* Top Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Boulogne DPE & Diagnostic" className="h-16 md:h-20 w-auto" />
-            <div className="hidden sm:flex flex-col">
-              <span className="font-bold text-lg text-foreground">
-                Boulogne <span className="text-primary">DPE</span>
-              </span>
-              <span className="text-xs text-accent font-medium tracking-wide">& DIAGNOSTIC</span>
-            </div>
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo + Company Info */}
+        <div className="flex items-center gap-4">
+          <a href="#" className="flex-shrink-0">
+            <img src={logo} alt="Boulogne DPE & Diagnostic" className="h-20 md:h-24 w-auto" />
           </a>
+          <div className="hidden sm:flex flex-col">
+            <span className="font-bold text-lg md:text-xl text-foreground">
+              BOULOGNE <span className="text-primary">DPE</span> & DIAGNOSTIC
+            </span>
+            <div className="flex flex-col text-xs text-muted-foreground mt-1">
+              <span>9 rue Le Corbusier, 92100 Boulogne-Billancourt</span>
+              <a href="tel:0184191392" className="flex items-center gap-1 hover:text-foreground transition-colors">
+                <Phone className="w-3 h-3 text-primary" />
+                <span className="font-medium">01 84 19 13 92</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
-          {/* Phone & CTA - Desktop only */}
-          <div className="hidden md:flex items-center gap-4">
-            <a href="tel:0184191392" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-              <Phone className="w-4 h-4 text-primary" />
-              <div className="flex flex-col items-end">
-                <span className="text-xs text-muted-foreground">Une question ?</span>
-                <span className="font-semibold text-foreground">01 84 19 13 92</span>
-              </div>
-            </a>
+        {/* CTA - Desktop only */}
+        <div className="hidden md:flex items-center gap-4">
             
             <Button 
               asChild
