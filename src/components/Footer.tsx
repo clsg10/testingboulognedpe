@@ -23,7 +23,7 @@ const Footer = () => {
               variant="outline"
               className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold"
             >
-              <a href="tel:0185537886" className="flex items-center gap-2">
+              <a href="tel:0184191392" className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 Appeler
               </a>
@@ -32,7 +32,7 @@ const Footer = () => {
               asChild
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold"
             >
-              <a href="#lead-form">Commander (99€)</a>
+              <a href="#lead-form">Commander (à partir de 99€)</a>
             </Button>
           </div>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-primary-foreground">Direct-DPE</span>
+              <span className="font-bold text-primary-foreground">Boulogne DPE & Diagnostic</span>
               <span className="text-sm">© 2024</span>
             </div>
             
@@ -59,11 +59,9 @@ const Footer = () => {
                   <div className="space-y-4 text-sm text-muted-foreground">
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">1. Éditeur du site</h4>
-                      <p>Le site Direct-DPE.fr est édité par la société <strong>Direct-DPE SAS</strong>, société par actions simplifiée au capital de 10 000€.</p>
-                      <p className="mt-2">Siège social : 12 rue de la République, 75001 Paris</p>
-                      <p>RCS Paris B 123 456 789</p>
-                      <p>SIRET : 123 456 789 00012</p>
-                      <p>TVA Intracommunautaire : FR 12 123456789</p>
+                      <p>Le site est édité par <strong>Boulogne DPE & Diagnostic</strong>.</p>
+                      <p className="mt-2">Siège social : 9 rue Le Corbusier, 92100 Boulogne-Billancourt</p>
+                      <p>Téléphone : 01 84 19 13 92</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">2. Directeur de la publication</h4>
@@ -116,7 +114,7 @@ const Footer = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">4. Vos droits (RGPD)</h4>
-                      <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour l'exercer, contactez-nous à : contact@direct-dpe.fr.</p>
+                      <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour l'exercer, contactez-nous au 01 84 19 13 92.</p>
                     </div>
                   </div>
                 </DialogContent>

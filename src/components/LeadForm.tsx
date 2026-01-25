@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 interface FormData {
   projectType: "vente" | "location";
@@ -12,6 +13,10 @@ interface FormData {
   nomComplet: string;
   email: string;
 }
+
+const EMAILJS_SERVICE_ID = "service_vit5it3";
+const EMAILJS_TEMPLATE_ID = "template_contact";
+const EMAILJS_PUBLIC_KEY = "Ftwn6uTqrz6OTHFoz";
 
 const LeadForm = () => {
   const { toast } = useToast();
@@ -29,16 +34,47 @@ const LeadForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      // Initialize EmailJS
+      emailjs.init(EMAILJS_PUBLIC_KEY);
 
-    setIsLoading(false);
-    setIsSubmitted(true);
+      // Send email via EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          to_email: "s61103011@gmail.com",
+          from_name: formData.nomComplet,
+          from_email: formData.email,
+          phone: formData.telephone,
+          postal_code: formData.codePostal,
+          project_type: formData.projectType === "vente" ? "Vente" : "Location",
+          message: `Nouvelle demande de DPE:
+          
+Nom: ${formData.nomComplet}
+Email: ${formData.email}
+Téléphone: ${formData.telephone}
+Code Postal: ${formData.codePostal}
+Type de projet: ${formData.projectType === "vente" ? "Vente" : "Location"}`,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
 
-    toast({
-      title: "Commande confirmée !",
-      description: "Un expert va vous recontacter sous 48h.",
-    });
+      setIsSubmitted(true);
+      toast({
+        title: "Demande envoyée !",
+        description: "Un expert va vous recontacter sous 48h.",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue. Veuillez réessayer ou nous appeler directement.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleInputChange = (field: keyof FormData, value: string) => {
@@ -54,16 +90,16 @@ const LeadForm = () => {
           </div>
           <h3 className="text-xl font-bold text-foreground">Demande reçue !</h3>
           <p className="text-muted-foreground">
-            Votre commande à 99€ est bien prise en compte. Un expert va vous recontacter d'ici quelques minutes.
+            Votre demande est bien prise en compte. Un expert va vous recontacter d'ici quelques minutes.
           </p>
           <div className="pt-4 border-t border-border">
             <p className="text-sm text-muted-foreground mb-2">Besoin d'aller plus vite ?</p>
             <a 
-              href="tel:0185537886" 
+              href="tel:0184191392" 
               className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
             >
               <Phone className="w-4 h-4" />
-              01 85 53 78 86
+              01 84 19 13 92
             </a>
           </div>
         </div>
@@ -82,10 +118,10 @@ const LeadForm = () => {
 
       {/* Title */}
       <h3 className="text-xl md:text-2xl font-bold text-center text-foreground mb-1">
-        DPE à Prix Fixe : <span className="text-primary">99€</span>
+        DPE <span className="text-primary">à partir de 99€</span>
       </h3>
       <p className="text-sm text-muted-foreground text-center mb-6">
-        Validez votre commande, on vous rappelle pour le RDV.
+        Validez votre demande, on vous rappelle pour le RDV.
       </p>
 
       {/* Form */}
@@ -127,7 +163,7 @@ const LeadForm = () => {
               <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="75001"
+                placeholder="92100"
                 value={formData.codePostal}
                 onChange={(e) => handleInputChange("codePostal", e.target.value)}
                 className="pl-10 h-12 bg-secondary/50 border-border"
@@ -194,7 +230,7 @@ const LeadForm = () => {
             </span>
           ) : (
             <span className="flex items-center gap-2">
-              Commander mon DPE (99€)
+              Demander un devis gratuit
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
           )}
