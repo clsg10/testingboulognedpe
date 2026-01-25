@@ -59,9 +59,9 @@ const Hero = () => {
 
             {/* Partner logos */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6">
-              <img src={logoOrpi} alt="Orpi" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={logoCentury21} alt="Century 21" className="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={logoLaforet} alt="Laforêt" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoOrpi} alt="Orpi" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoCentury21} alt="Century 21" className="h-14 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoLaforet} alt="Laforêt" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
               <div className="h-6 w-px bg-border mx-2" />
               <span className="text-xs text-muted-foreground">Recommandé par les agences</span>
             </div>
