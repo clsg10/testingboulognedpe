@@ -17,7 +17,7 @@ const Header = () => {
             <span className="font-bold text-sm sm:text-lg md:text-xl text-foreground">
               BOULOGNE <span className="text-primary">DPE</span> & DIAGNOSTIC
             </span>
-            <div className="hidden sm:flex flex-col text-xs text-muted-foreground mt-1">
+            <div className="flex flex-col text-[10px] sm:text-xs text-muted-foreground mt-0.5 sm:mt-1">
               <span>9 rue Le Corbusier, 92100 Boulogne-Billancourt</span>
               <a href="tel:0184191392" className="flex items-center gap-1 hover:text-foreground transition-colors">
                 <Phone className="w-3 h-3 text-primary" />
