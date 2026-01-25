@@ -11,13 +11,13 @@ const Header = () => {
         {/* Logo + Company Info */}
         <div className="flex items-center gap-4">
           <a href="#" className="flex-shrink-0">
-            <img src={logo} alt="Boulogne DPE & Diagnostic" className="h-24 md:h-28 w-auto" />
+            <img src={logo} alt="Boulogne DPE & Diagnostic" className="h-28 md:h-32 w-auto" />
           </a>
           <div className="flex flex-col">
-            <span className="font-bold text-sm sm:text-lg md:text-xl text-foreground">
+            <span className="font-bold text-base sm:text-xl md:text-2xl text-foreground">
               BOULOGNE <span className="text-primary">DPE</span> & DIAGNOSTIC
             </span>
-            <div className="flex flex-col text-[10px] sm:text-xs text-muted-foreground mt-0.5 sm:mt-1">
+            <div className="flex flex-col text-xs sm:text-sm text-muted-foreground mt-1">
               <span>9 rue Le Corbusier, 92100 Boulogne-Billancourt</span>
               <a href="tel:0184191392" className="flex items-center gap-1 hover:text-foreground transition-colors">
                 <Phone className="w-3 h-3 text-primary" />
