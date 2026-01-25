@@ -15,7 +15,7 @@ interface FormData {
 }
 
 const EMAILJS_SERVICE_ID = "service_vit5it3";
-const EMAILJS_TEMPLATE_ID = "template_contact";
+const EMAILJS_TEMPLATE_ID = "template_le0pxb2";
 const EMAILJS_PUBLIC_KEY = "Ftwn6uTqrz6OTHFoz";
 
 const LeadForm = () => {
