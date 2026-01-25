@@ -11,7 +11,7 @@ const Header = () => {
         {/* Logo + Company Info */}
         <div className="flex items-center gap-4">
           <a href="#" className="flex-shrink-0">
-            <img src={logo} alt="Boulogne DPE & Diagnostic" className="h-20 md:h-24 w-auto" />
+            <img src={logo} alt="Boulogne DPE & Diagnostic" className="h-24 md:h-28 w-auto" />
           </a>
           <div className="flex flex-col">
             <span className="font-bold text-sm sm:text-lg md:text-xl text-foreground">
