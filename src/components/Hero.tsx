@@ -1,5 +1,8 @@
 import { CheckCircle } from "lucide-react";
 import LeadForm from "./LeadForm";
+import logoOrpi from "@/assets/logo-orpi.png";
+import logoCentury21 from "@/assets/logo-century21.png";
+import logoLaforet from "@/assets/logo-laforet.png";
 
 const Hero = () => {
   return (
@@ -55,13 +58,10 @@ const Hero = () => {
             </div>
 
             {/* Partner logos */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 opacity-60">
-              <span className="text-xl font-bold text-foreground tracking-tight">orpi</span>
-              <div className="flex flex-col items-center border border-foreground/20 px-3 py-1 rounded">
-                <span className="text-xs font-bold text-foreground tracking-widest">CENTURY</span>
-                <span className="text-lg font-bold text-foreground leading-none">21</span>
-              </div>
-              <span className="text-xl font-bold text-foreground tracking-tight">laforêt<span className="text-accent">.</span></span>
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6">
+              <img src={logoOrpi} alt="Orpi" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoCentury21} alt="Century 21" className="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={logoLaforet} alt="Laforêt" className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity" />
               <div className="h-6 w-px bg-border mx-2" />
               <span className="text-xs text-muted-foreground">Recommandé par les agences</span>
             </div>
