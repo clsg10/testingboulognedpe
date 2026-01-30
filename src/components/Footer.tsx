@@ -1,37 +1,21 @@
 import { useState } from "react";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 const Footer = () => {
   const [openModal, setOpenModal] = useState<"mentions" | "privacy" | null>(null);
-
-  return (
-    <>
+  return <>
       {/* CTA Bar */}
       <section className="py-8 bg-primary">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              asChild
-              variant="outline"
-              className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold"
-            >
+            <Button asChild variant="outline" className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">
               <a href="tel:0184191392" className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 Appeler
               </a>
             </Button>
-            <Button
-              asChild
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold"
-            >
+            <Button asChild className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold">
               <a href="#lead-form">Commander (à partir de 99€)</a>
             </Button>
           </div>
@@ -48,7 +32,7 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center gap-6 text-sm">
-              <Dialog open={openModal === "mentions"} onOpenChange={(open) => setOpenModal(open ? "mentions" : null)}>
+              <Dialog open={openModal === "mentions"} onOpenChange={open => setOpenModal(open ? "mentions" : null)}>
                 <DialogTrigger className="hover:text-primary-foreground transition-colors">
                   Mentions Légales
                 </DialogTrigger>
@@ -72,8 +56,9 @@ const Footer = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">3. Hébergement</h4>
-                      <p>Le site est hébergé par AWS Europe (Paris).</p>
-                      <p>Amazon Web Services EMEA SARL, 38 Avenue John F. Kennedy, L-1855 Luxembourg.</p>
+                      <p>Le site est hébergé par ElevenScale</p>
+                      <p>
+                    </p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">4. Propriété intellectuelle</h4>
@@ -83,7 +68,7 @@ const Footer = () => {
                 </DialogContent>
               </Dialog>
 
-              <Dialog open={openModal === "privacy"} onOpenChange={(open) => setOpenModal(open ? "privacy" : null)}>
+              <Dialog open={openModal === "privacy"} onOpenChange={open => setOpenModal(open ? "privacy" : null)}>
                 <DialogTrigger className="hover:text-primary-foreground transition-colors">
                   Politique de Confidentialité
                 </DialogTrigger>
@@ -126,8 +111,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
-  );
+    </>;
 };
-
 export default Footer;
