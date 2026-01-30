@@ -59,13 +59,16 @@ const Footer = () => {
                   <div className="space-y-4 text-sm text-muted-foreground">
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">1. Éditeur du site</h4>
-                      <p>Le site est édité par <strong>Boulogne DPE & Diagnostic</strong>.</p>
-                      <p className="mt-2">Siège social : 9 rue Le Corbusier, 92100 Boulogne-Billancourt</p>
-                      <p>Téléphone : 01 84 19 13 92</p>
+                      <p>Le site est édité par <strong>BOULOGNE DPE & DIAGNOSTIC</strong>.</p>
+                      <p className="mt-2"><strong>SIRET :</strong> 100 287 143 00018</p>
+                      <p><strong>Siège social :</strong> 9 rue Le Corbusier, 92100 Boulogne-Billancourt</p>
+                      <p><strong>Téléphone :</strong> 01 84 19 13 92</p>
+                      <p><strong>Activité (APE) :</strong> 71.20B – Analyses, essais et inspections techniques</p>
+                      <p><strong>Établissement actif depuis :</strong> 01/07/2025</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">2. Directeur de la publication</h4>
-                      <p>Monsieur Jean Directeur, en qualité de Président.</p>
+                      <p>Le représentant légal de BOULOGNE DPE & DIAGNOSTIC.</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">3. Hébergement</h4>
